@@ -55,15 +55,15 @@ export default function Home() {
         <SummaryCards key="summary" summary={report.summary} />,
         <TradesTable
           key="trades"
-          politicianTrades={report.politician_trades}
-          insiderTrades={report.insider_trades}
+          politicianTrades={report.politician_trades ?? []}
+          insiderTrades={report.insider_trades ?? []}
         />,
-        <SignalCards key="signals" signals={report.signals} />,
-        <SynthesisBlock key="synthesis" synthesis={report.synthesis} />,
-        <ConvictionBar key="conviction" score={report.conviction_score} />,
+        <SignalCards key="signals" signals={report.signals ?? []} />,
+        <SynthesisBlock key="synthesis" synthesis={report.synthesis ?? ""} />,
+        <ConvictionBar key="conviction" score={report.conviction_score ?? 0} />,
         <SetupBox key="setup" setup={report.suggested_setup} />,
-        ...(report.data_gaps.length > 0
-          ? [<DataGaps key="gaps" gaps={report.data_gaps} />]
+        ...((report.data_gaps ?? []).length > 0
+          ? [<DataGaps key="gaps" gaps={report.data_gaps ?? []} />]
           : []),
       ]
     : [];
