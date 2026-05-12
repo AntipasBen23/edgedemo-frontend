@@ -14,9 +14,6 @@ export default function Header() {
             <span className="font-mono text-sm font-bold tracking-widest text-accent-primary">
               AI EDGE
             </span>
-            <span className="ml-2 font-mono text-xs text-text-muted">
-              // SMART MONEY TRACKER
-            </span>
           </div>
         </div>
 
