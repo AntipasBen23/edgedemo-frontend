@@ -74,7 +74,7 @@ export default function TradesTable({ politicianTrades, insiderTrades }: Props) 
             </thead>
             <tbody>
               {politicianTrades.length === 0 ? (
-                <EmptyRow message="No disclosed congressional trades found in last 30 days." />
+                <EmptyRow message="No disclosed congressional trades found in the last 12 months." />
               ) : (
                 politicianTrades.map((t, i) => (
                   <TableRow
@@ -120,7 +120,7 @@ export default function TradesTable({ politicianTrades, insiderTrades }: Props) 
             </thead>
             <tbody>
               {insiderTrades.length === 0 ? (
-                <EmptyRow message="No Form 4 filings found in last 30 days." />
+                <EmptyRow message="No Form 4 filings found in the last 90 days." />
               ) : (
                 insiderTrades.map((t, i) => (
                   <TableRow
