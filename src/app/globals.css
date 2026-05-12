@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Backgrounds */
+  --color-bg-primary: #080d08;
+  --color-bg-secondary: #0e160e;
+  --color-bg-tertiary: #141f14;
+  --color-bg-border: #1a2e1a;
+
+  /* Accent */
+  --color-accent-primary: #00ff9d;
+  --color-accent-dim: #00cc7a;
+
+  /* Signals */
+  --color-signal-bull: #00ff9d;
+  --color-signal-bear: #ff4d4d;
+  --color-signal-watch: #ffd700;
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8a9e8a;
+  --color-text-muted: #4a5e4a;
+  --color-text-accent: #00ff9d;
+
+  /* Fonts — variables resolved from layout.tsx via CSS custom properties */
+  --font-mono: var(--font-jetbrains), "Fira Code", monospace;
+  --font-display: var(--font-space-grotesk), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #080d08;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e160e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2e1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc7a;
+}
+
+/* Accent glow utility */
+.glow-accent {
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.15);
 }
