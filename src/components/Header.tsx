@@ -20,10 +20,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="hidden items-center gap-6 md:flex">
-          <span className="font-mono text-xs text-text-muted">
-            POWERED BY GPT-4O-MINI
-          </span>
+        <div className="hidden items-center gap-3 md:flex">
           <div className="flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent-primary" />
             <span className="font-mono text-xs text-text-secondary">LIVE</span>
