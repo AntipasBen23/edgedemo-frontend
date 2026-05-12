@@ -13,7 +13,7 @@ export default function SynthesisBlock({ synthesis }: Props) {
   return (
     <div className="rounded border border-bg-border bg-bg-secondary p-6">
       <div className="mb-4 font-mono text-xs tracking-widest text-text-muted">
-        OPENCLAW SYNTHESIS // AI ANALYST
+        AI EDGE SYNTHESIS // SMART MONEY ANALYSIS
       </div>
       <div className="space-y-4">
         {paragraphs.length > 0 ? (
